@@ -1,4 +1,4 @@
-based on the childhood favorite "kill a mole" that is a more animal friendly version where we feed them instead
+based on the childhood favorite "smash a mole" that is a more animal friendly version where we feed them instead
 
 The game has all the common arcade features such as: progressive levels difficulty, win conditions, lose conditions, score, sounds, bonuses etc..
 
