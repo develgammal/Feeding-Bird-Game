@@ -15,8 +15,6 @@ setInterval(function () {
   }
 }, 1000);
 
-document.body.style.zoom="50%"
-
 const wormContainer = document.querySelector(".worm-container");
 
 const getRandomInterval = () =>
