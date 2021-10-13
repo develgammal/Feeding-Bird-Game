@@ -1,3 +1,6 @@
+![demo](/img/demo1.gif)
+
+
 based on the childhood favorite "smash a mole" that is a more animal friendly version where we feed them instead
 
 The game has all the common arcade features such as: progressive levels difficulty, win conditions, lose conditions, score, sounds, bonuses etc..
@@ -16,3 +19,7 @@ Audio sources from :
 https://mixkit.co/free-sound-effects/game/
 
 hope you have fun trying it out, watch out for those smoking devils!
+
+![demo](/img/demo2.gif)
+![demo](/img/demo3.gif)
+![demo](/img/demo4.gif)
