@@ -1,0 +1,79 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Feeding Bird Game</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <section class="bg">
+      <div class="display-wrapper">
+        <main></main>
+        <aside></aside>
+      </div>
+      <div class="worm-box">
+        <div class="worm-container">
+          <img class="worm" src="./img/worm.png" alt="worm meter">
+        </div>
+      </div>
+      <div class="hole-container">
+        <div class="hole" id="hole-0"><img data-index="0" src="./img/king-mole-hungry.png" alt="mole" class="mole">
+        </div>
+      </div>
+      <div class="hole-container">
+        <div class="hole" id="hole-1"><img data-index="1" src="./img/king-mole-fed.png" alt="mole" class="mole"></div>
+      </div>
+      <div class="hole-container">
+        <div class="hole" id="hole-2"><img data-index="2" src="./img/king-mole-hungry.png" alt="mole" class="mole">
+        </div>
+      </div>
+      <div class="hole-container">
+        <div class="hole" id="hole-3"><img data-index="3" src="./img/king-mole-sad.png" alt="mole" class="mole"></div>
+      </div>
+      <div class="hole-container">
+        <div class="hole" id="hole-4"><img data-index="4" src="./img/king-mole-leaving.png" alt="mole" class="mole">
+        </div>
+      </div>
+      <div class="hole-container">
+        <div class="hole" id="hole-5"><img data-index="5" src="./img/mole-hungry.png" alt="mole" class="mole"></div>
+      </div>
+      <div class="hole-container">
+        <div class="hole" id="hole-6"><img data-index="6" src="./img/mole-fed.png" alt="mole" class="mole"></div>
+      </div>
+      <div class="hole-container">
+        <div class="hole" id="hole-7"><img data-index="7" src="./img/mole-sad.png" alt="mole" class="mole"></div>
+      </div>
+      <div class="hole-container">
+        <div class="hole" id="hole-8"><img data-index="8" src="./img/mole-leaving.png" alt="mole" class="mole"></div>
+      </div>
+      <div class="hole-container">
+        <div class="hole" id="hole-9"><img data-index="9" src="./img/king-mole-hungry.png" alt="mole" class="mole">
+        </div>
+      </div>
+    </section>
+
+    <section class="win">
+      <h1>You Win !! &#127942;</h1>
+      <button class="next-level" onclick="nextLevelReset()">Next Level>><br><span>click here</span></button>
+    </section>
+    <section class="lose">
+      <h1>You Lose &#128128;</h1>
+      <a class="play-again" href="">Play again?</a>
+    </section>
+
+    <!-- interruption messages during the game -->
+    <div class="double-points"> 2X POINTS &#128293; </div>
+    <div class="minus-points">
+      FEED THE DEVIL!&#128520;<br>-20 Points &#128561;
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
