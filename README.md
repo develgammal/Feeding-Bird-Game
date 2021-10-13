@@ -1,5 +1,7 @@
 based on the childhood favorite "kill a mole" that is a more animal friendly version where we feed them instead
 
+The game has all the common arcade features such as: progressive levels difficulty, win conditions, lose conditions, score, sounds, bonuses etc..
+
 It was a lot of fun building this project using vanilla HTML, CSS & JS without the aid of any framework
 
 what I learned the most in this project was appreciating logic & scope dependencies in JS and how to solve problems by breaking them into smaller chunks and dealing with them one line at a time;
