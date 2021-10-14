@@ -13,7 +13,7 @@ what I learned the most in this project was appreciating logic & scope dependenc
 
 <br />
 
-**....................................The red flashing clock will warn you before your time runs out! 	&#x1F557;.....................................**
+**The red flashing clock will warn you before your time runs out! 	&#x1F557;**
 
 <br />
 
@@ -21,7 +21,7 @@ what I learned the most in this project was appreciating logic & scope dependenc
 
 <br />
 
-**....................................Hope you have fun trying it out, watch out for those smoking devils! 😈........................................**
+**Hope you have fun trying it out, watch out for those smoking devils! 😈**
 
 <br />
 
@@ -29,7 +29,7 @@ what I learned the most in this project was appreciating logic & scope dependenc
 
 <br />
 
-**....................................Feeding the king earns you double points! 	&#x1F934;..........................................................**
+**Feeding the king earns you double points! 	&#x1F934;**
 
 <br />
 
