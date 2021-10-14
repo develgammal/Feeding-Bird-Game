@@ -25,7 +25,7 @@ what I learned the most in this project was appreciating logic & scope dependenc
 
 <br />
 
-![demo](/img/demo3.gif)
+<img src="/img/demo3.gif" width="600" />
 
 <br />
 
@@ -33,7 +33,7 @@ what I learned the most in this project was appreciating logic & scope dependenc
 
 <br />
 
-![demo](/img/demo2.gif)
+<img src="/img/demo2.gif" width="600" />
 
 
 Most of the artwork was provided by the talented Alice Brereton
