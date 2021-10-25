@@ -9,7 +9,7 @@ The game has all the common arcade features such as: progressive levels difficul
 
 what I learned the most in this project was appreciating logic & scope dependencies in JS and how to solve problems by breaking them into smaller chunks and dealing with them one line/function at a time &#x1F5DD; & how to employ requestAnimationFrame instead of setInterval when dealing with hot code where real time performance could pose an issue which was a really important concept for me to tackle. 💡
 
-<br />
+# Features
 
 **The red flashing clock will warn you before your time runs out! 	&#x1F557;**
 
