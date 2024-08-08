@@ -1,13 +1,28 @@
+// ........................................
+// 1. Interval Settings :
+// ........................................
+
+// Initial intervals for how often mole characters should appear
 let minInterval = 2000;
 let maxInterval = 20000;
 let quickInterval = 500;
 let hungryInterval = 1500;
 
+// ........................................
+// 2. Score and Level Configuration :
+// ........................................
+
+// Score and level config
 let winScore = 100;
 let score = 0;
 let totalScore = 0;
 let level = 1;
 
+// ........................................
+// 3. Game Timer :
+// ........................................
+
+// Decrementing Game timer (in seconds)
 let gameTime = 40;
 setInterval(function () {
   if (gameTime >= 0) {
@@ -15,18 +30,34 @@ setInterval(function () {
   }
 }, 1000);
 
+// ........................................
+// 4. DOM Elements :
+// ........................................
+
+// Container for the worm element that the bird feeds in moles mouth
 const wormContainer = document.querySelector(".worm-container");
 
+// ........................................
+// 5. Interval Functions :
+// ........................................
+
+// Function to get a random interval between minInterval and maxInterval
 const getRandomInterval = () =>
   Date.now() + minInterval + Math.floor(Math.random() * maxInterval);
 
+// Functions to calculate quick and hungry intervals
 const getQuickInterval = () => Date.now() + quickInterval;
-
 const getHungryInterval = () => Date.now() + hungryInterval;
 
-// audio
+// ........................................
+// 6. Audio Params :
+// ........................................
+
+// Audio triggers
 let playMusic = true;
 let playClock = true;
+
+// Audio file paths
 const bonusSound = new Audio("./snd/bonus.wav");
 const feedSound = new Audio("./snd/quick.wav");
 const minusSound = new Audio("./snd/cry.wav");
@@ -34,9 +65,12 @@ const loseSound = new Audio("./snd/lose.wav");
 const winSound = new Audio("./snd/win.wav");
 const buttonSound = new Audio("./snd/coin.wav");
 const tickSound = new Audio("./snd/tick.wav");
-// time run out
 
-//.............................on clicking next level button.....................
+// ........................................
+// 7. Level Management :
+// ........................................
+
+// Function to handle next level reset when the user wins and clicks the next level button
 const nextLevelReset = () => {
   buttonSound.play();
 
@@ -53,93 +87,38 @@ const nextLevelReset = () => {
   document.querySelector(".win").classList.toggle("show", false);
   document.querySelector(".lose").classList.toggle("show", false);
 
-  //reset difficulty
+  // Adjust difficulty by decreasing intervals
   if (quickInterval >= 80 && hungryInterval >= 800) {
     quickInterval -= 30;
     hungryInterval -= 125;
   }
 };
 
-// array with the nine holes in the game
+// ........................................
+// 8. Mole Elements :
+// ........................................
 
+// Array containing mole elements and their initial status
 const moles = [
-  {
-    status: "sad",
-    next: getQuickInterval(),
-    king: false,
-    devil: false,
-    node: document.getElementById("hole-0"),
-  },
-  {
-    status: "sad",
-    next: getQuickInterval(),
-    king: true,
-    devil: false,
-    node: document.getElementById("hole-1"),
-  },
-  {
-    status: "sad",
-    next: getQuickInterval(),
-    king: false,
-    devil: true,
-    node: document.getElementById("hole-2"),
-  },
-  {
-    status: "sad",
-    next: getQuickInterval(),
-    king: false,
-    devil: false,
-    node: document.getElementById("hole-3"),
-  },
-  {
-    status: "sad",
-    next: getQuickInterval(),
-    king: true,
-    devil: false,
-    node: document.getElementById("hole-4"),
-  },
-  {
-    status: "sad",
-    next: getQuickInterval(),
-    king: false,
-    devil: false,
-    node: document.getElementById("hole-5"),
-  },
-  {
-    status: "sad",
-    next: getQuickInterval(),
-    king: false,
-    devil: false,
-    node: document.getElementById("hole-6"),
-  },
-  {
-    status: "sad",
-    next: getQuickInterval(),
-    king: true,
-    devil: false,
-    node: document.getElementById("hole-7"),
-  },
-  {
-    status: "sad",
-    next: getQuickInterval(),
-    king: false,
-    devil: false,
-    node: document.getElementById("hole-8"),
-  },
-  {
-    status: "sad",
-    next: getQuickInterval(),
-    king: false,
-    devil: false,
-    node: document.getElementById("hole-9"),
-  },
+  { status: "sad", next: getQuickInterval(), king: false, devil: false, node: document.getElementById("hole-0") },
+  { status: "sad", next: getQuickInterval(), king: true, devil: false, node: document.getElementById("hole-1") },
+  { status: "sad", next: getQuickInterval(), king: false, devil: true, node: document.getElementById("hole-2") },
+  { status: "sad", next: getQuickInterval(), king: false, devil: false, node: document.getElementById("hole-3") },
+  { status: "sad", next: getQuickInterval(), king: true, devil: false, node: document.getElementById("hole-4") },
+  { status: "sad", next: getQuickInterval(), king: false, devil: false, node: document.getElementById("hole-5") },
+  { status: "sad", next: getQuickInterval(), king: false, devil: false, node: document.getElementById("hole-6") },
+  { status: "sad", next: getQuickInterval(), king: true, devil: false, node: document.getElementById("hole-7") },
+  { status: "sad", next: getQuickInterval(), king: false, devil: false, node: document.getElementById("hole-8") },
+  { status: "sad", next: getQuickInterval(), king: false, devil: false, node: document.getElementById("hole-9") },
 ];
 
-// updates mole states
+// ........................................
+// 9. Mole Status Management :
+// ........................................
 
+// Function to update mole statuses
 const getNextStatus = (mole) => {
   switch (mole.status) {
-    //   hungry
     case "hungry":
       if (mole.king) {
         mole.node.children[0].src = "./img/king-mole-sad.png";
@@ -152,7 +131,6 @@ const getNextStatus = (mole) => {
       mole.next = getQuickInterval();
       break;
 
-    //   sad & fed
     case "sad":
     case "fed":
       mole.next = getQuickInterval();
@@ -164,7 +142,6 @@ const getNextStatus = (mole) => {
       mole.status = "leaving";
       break;
 
-    //   leaving
     case "leaving":
       mole.next = getRandomInterval();
       mole.king = false;
@@ -173,18 +150,14 @@ const getNextStatus = (mole) => {
       mole.status = "gone";
       break;
 
-    //   gone
     case "gone":
       mole.status = "hungry";
-
       const assignStatus = () => {
         let randomValue = Math.random();
         if (randomValue > 0.82) {
-          return (mole.king = true);
+          mole.king = true;
         } else if (randomValue < 0.2) {
           mole.devil = true;
-        } else {
-          return;
         }
       };
       assignStatus();
@@ -203,8 +176,11 @@ const getNextStatus = (mole) => {
   }
 };
 
-// handles all screen click events
+// ........................................
+// 10. Event Handling :
+// ........................................
 
+// Function to handle click events on moles
 const handleClick = (e) => {
   document.querySelector(".double-points").classList.toggle("show", false);
   document.querySelector(".minus-points").classList.toggle("show", false);
@@ -224,7 +200,6 @@ const handleClick = (e) => {
     mole.node.children[0].src = "./img/king-mole-fed.png";
     score += 20;
     totalScore += 20;
-
     document.querySelector(".double-points").classList.toggle("show", true);
   } else if (mole.devil) {
     minusSound.play();
@@ -240,8 +215,11 @@ const handleClick = (e) => {
   wormContainer.style.width = `${(score / winScore) * 100}%`;
 };
 
-//win & lose functions
+// ........................................
+// 11. Win/Lose Conditions :
+// ........................................
 
+// Function to handle win conditions
 const win = () => {
   playClock = false;
 
@@ -254,6 +232,8 @@ const win = () => {
   document.querySelector(".double-points").classList.toggle("show", false);
   document.querySelector(".minus-points").classList.toggle("show", false);
 };
+
+// Function to handle lose conditions
 const lose = () => {
   playClock = false;
 
@@ -267,10 +247,14 @@ const lose = () => {
   document.querySelector(".minus-points").classList.toggle("show", false);
 };
 
+// Add event listener for clicks on the game wrapper
 document.querySelector(".wrapper").addEventListener("click", handleClick);
 
-//frame rendering and win/lose conditions
+// ........................................
+// 12. Game Frame Update :
+// ........................................
 
+// Function to update the game frame and check win/lose conditions
 const nextFrame = () => {
   if (score >= winScore) {
     win();
@@ -284,21 +268,23 @@ const nextFrame = () => {
       getNextStatus(moles[i]);
     }
   }
-  const mainTracker = (document.querySelector(
-    "main"
-  ).innerHTML = `LEVEL: ${level}  SCORE: ${totalScore}`);
 
+  // Update main tracker with current level and total score
+  const mainTracker = (document.querySelector("main").innerHTML = `LEVEL: ${level}  SCORE: ${totalScore}`);
+
+  // Play ticking sound when time is running out
   if (gameTime < 5 && playClock) {
     tickSound.play();
     playClock = false;
     document.querySelector("aside").classList.toggle("danger", true);
   }
 
-  const timeDisplay = (document.querySelector(
-    "aside"
-  ).innerHTML = `&#8987;${gameTime}:00`);
+  // Update time display
+  const timeDisplay = (document.querySelector("aside").innerHTML = `&#8987;${gameTime}:00`);
 
+  // Request the next animation frame
   requestAnimationFrame(nextFrame);
 };
 
+// Start the game by requesting the first animation frame
 requestAnimationFrame(nextFrame);
