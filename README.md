@@ -37,7 +37,7 @@ what I learned the most in this project was appreciating logic & scope dependenc
 
 
 Most of the artwork was provided by the talented Alice Brereton
-https://www.pickledalice.com/
+https://www.pickledalice.com/ for use within the Frontendmasters workshop while
 the rest of the visuals were edited by me using basic 3D paint editing software as well as some open source graphics sources that I found online.
 
 Audio sources from :
