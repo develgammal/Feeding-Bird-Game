@@ -2,7 +2,6 @@
 
 ![demo](/img/demo1.gif)
 
-
 **Based on the childhood favorite "smash a mole" 	&#x1F528; this is a more animal friendly version where we feed them instead 	&#128057;:**
 
 <br/>
