@@ -1,43 +1,33 @@
-# <a href="https://amrofeedingbird.netlify.app/">Click here for Deployed Website Link</a>
+# [Deployed Website Link](https://amrofeedingbird.netlify.app/)
 
-![demo](/img/demo1.gif)
+![Game Demo](/img/demo1.gif)
 
-**Based on the childhood favorite "smash a mole" 	&#x1F528; this is a more animal friendly version where we feed them instead 	&#128057;:**
+### Welcome to "Feeding Bird"!
+
+Inspired by the classic "Whack-a-Mole" game &#x1F528;, this is a more animal-friendly version where instead of smashing them with a hammer, you are a nice bird that feeds the critters instead &#128057;.
 
 <br/>
 
-The minimal vanilla javascript & css game has all the common arcade features such as: progressive levels difficulty, win conditions, lose conditions, score, sounds, bonuses etc.. that made our childhood happy 	&#128512;, it was a lot of fun building this project using vanilla :icecream: HTML, CSS & JS " as a single script file this time instead of modules " without the aid of any framework.
+This minimalistic game, built with vanilla JavaScript and CSS, includes all the beloved arcade features: progressive difficulty levels, win/lose conditions, scoring, sound effects, and bonuses. It's a nostalgic nod to the games of our childhood &#128512;. The project was a blast to create using only HTML, CSS, and JavaScript—all in a single script file, with no frameworks involved!
 
-what I learned the most in this project was appreciating logic & scope dependencies in JS and how to solve problems by breaking them into smaller chunks and dealing with them one line/function at a time &#x1F5DD; & how to employ requestAnimationFrame instead of setInterval when dealing with hot code where real time performance could pose an issue which was a really important concept for me to tackle. 💡
+### What I Learned
 
-# Features
+This project deepened my understanding of logic and scope dependencies in JavaScript. I tackled problems by breaking them down into manageable pieces, focusing on one line or function at a time &#x1F5DD;. I also explored the use of `requestAnimationFrame` instead of `setInterval` for performance-critical code, which was a key learning moment for me 💡.
 
-**The red flashing clock will warn you before your time runs out! 	&#x1F557;**
+# Game Features
 
-<br />
+- **Time's Ticking!** The red flashing clock warns you as time runs out &#x1F557;.
+  
+  ![Clock Warning](/img/demo4.gif)
 
-![demo](/img/demo4.gif)
+- **Double the Fun!** Feeding the king critter earns you double points &#x1F934;.
 
-<br />
+  ![King Critter](/img/demo2.gif)
 
-**Hope you have fun trying it out, watch out for those smoking devils! 😈**
+- **Beware the Devils!** Keep an eye out for those sneaky, weed smoking devils 🌿⚗️😈.
 
-<br />
+  ![Sneaky Devils](/img/demo3.gif)
 
-<img src="/img/demo3.gif" width="600" />
+Most of the artwork was generously provided by the talented [Alice Brereton](https://www.pickledalice.com/) for use in the Frontendmasters workshop. I edited the remaining visuals using basic 3D paint software, along with some open-source graphics "using my very terrible graphic design skills as a coding nerd".
 
-<br />
-
-**Feeding the king earns you double points! 	&#x1F934;**
-
-<br />
-
-<img src="/img/demo2.gif" width="600" />
-
-
-Most of the artwork was provided by the talented Alice Brereton
-https://www.pickledalice.com/ for use within the Frontendmasters workshop while
-the rest of the visuals were edited by me using basic 3D paint editing software as well as some open source graphics sources that I found online.
-
-Audio sources from :
-https://mixkit.co/free-sound-effects/game/
+Audio effects were sourced from [Mixkit](https://mixkit.co/free-sound-effects/game/).
